@@ -27,4 +27,21 @@ function addToCart(item, price) {
         }
     }
     updateCart(cart);
+} 
+
+function updateCart(cart) {
+    var total = 0;
+    var cartOutput = document.getElementById('cart');
+    cart.forEach(item => {
+        total += item.qty;
+    });
+    cartOutput.innerText = '(${total})';
+    console.log(cart);
+}
+
+function checkout(cart) {
+    var items = document.getElementById('items');
+    items.classList.add("hidden");
+    var checkout = document.getElementById('checkout');
+    checkout.classList.remove("hidden");
 }
