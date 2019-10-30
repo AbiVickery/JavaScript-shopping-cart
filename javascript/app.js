@@ -26,5 +26,5 @@ function addToCart(item, price) {
             });
         }
     }
-    updateCart(cart)
+    updateCart(cart);
 }
